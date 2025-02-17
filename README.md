@@ -9,22 +9,27 @@ O ambiente principal de execução utiliza **Windows**, com um **subsistema Ubun
 ## 🚀 Passo a passo para rodar o projeto
 
 ### 1️⃣ Clone o repositório
+
 ```sh
 git clone https://github.com/JulioCavenaghi/BrasilCard.git
 ```
 
 ### 2️⃣ Acesse o diretório do projeto
+
 ```sh
 cd BrasilCard
 ```
 
 ### 3️⃣ Configure as variáveis de ambiente
+
 Renomeie o arquivo `.env.example` para `.env`:
+
 ```sh
 cp .env.example .env
 ```
 
 Edite o arquivo `.env` e personalize as variáveis conforme suas necessidades:
+
 ```ini
 APP_URL=http://localhost
 
@@ -36,45 +41,62 @@ DB_USERNAME=usuario
 DB_PASSWORD=senha
 ```
 
-### 4️⃣ Inicialize os containers Docker
+### 4️⃣ Instale as dependências do frontend
+
+Execute o seguinte comando no diretório raiz do projeto para instalar as dependências do frontend fora do container:
+
+```sh
+npm install
+```
+
+### 5️⃣ Inicialize os containers Docker
+
 ```sh
 docker compose up -d
 ```
 
 Acesse o container da aplicação:
+
 ```sh
 docker compose exec app bash
 ```
 
-### 5️⃣ Instale as dependências do projeto
+### 6️⃣ Instale as dependências do backend
+
 ```sh
 composer install
 ```
 
-### 6️⃣ Gere a chave da aplicação Laravel
+### 7️⃣ Gere a chave da aplicação Laravel
+
 ```sh
 php artisan key:generate
 ```
 
-### 7️⃣ Execute as migrações do banco de dados
+### 8️⃣ Execute as migrações do banco de dados
+
 ```sh
 php artisan migrate
 ```
 
-### 8️⃣ Acesse a aplicação
+### 9️⃣ Acesse a aplicação
+
 Abra no navegador a URL configurada em `APP_URL`.
 
 ---
 
 ## 🛠 Tecnologias utilizadas
+
 - **Laravel** (Framework Backend)
 - **Docker** (Containers)
 - **MySQL** (Banco de Dados)
 - **Composer** (Gerenciador de dependências PHP)
+- **NPM** (Gerenciador de pacotes Node.js)
 
 Caso tenha dúvidas ou problemas na instalação, consulte a documentação oficial de cada tecnologia ou abra uma **issue** no repositório.
 
 ---
 
-📌 **Autor:** Julio Cavenaghi  
-📧 **Contato:** [Julio Cavenaghi](https://www.linkedin.com/in/juliocavenaghi/)
+📌 **Autor:** Julio Cavenaghi\
+📧 **Contato:** [[Julio Cavenaghi]](https://www.linkedin.com/in/juliocavenaghi/)
+
