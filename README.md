@@ -41,12 +41,13 @@ DB_USERNAME=usuario
 DB_PASSWORD=senha
 ```
 
-### 4️⃣ Instale as dependências do frontend
+### 4️⃣ Instale e inicialize as dependências do frontend
 
 Execute o seguinte comando no diretório raiz do projeto para instalar as dependências do frontend fora do container:
 
 ```sh
 npm install
+npm run dev
 ```
 
 ### 5️⃣ Inicialize os containers Docker
