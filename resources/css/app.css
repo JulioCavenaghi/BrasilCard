@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-right {
+    @apply ml-auto flex flex-col items-end text-right pr-10;
+}
+
